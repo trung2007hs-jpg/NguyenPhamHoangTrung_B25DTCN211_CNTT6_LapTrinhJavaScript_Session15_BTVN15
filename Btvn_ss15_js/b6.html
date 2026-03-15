@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>b6</title>
+</head>
+
+<body>
+    <h2>Điều chỉnh kích thước chữ</h2>
+    <p id="text">
+        JavaScript là ngôn ngữ lập trình phổ biến dùng để xây dựng các ứng dụng web tương tác.
+    </p>
+    <div class="buttons">
+        <button id="increase">+</button>
+        <button id="decrease">-</button>
+    </div>
+    <script>
+        let text = document.getElementById("text")
+        let increaseBtn = document.getElementById("increase")
+        let decreaseBtn = document.getElementById("decrease")
+        let size = 18
+        increaseBtn.onclick = function () {
+            size = size + 2
+            text.style.fontSize = size + "px"
+        }
+        decreaseBtn.onclick = function () {
+            size = size - 2
+            text.style.fontSize = size + "px"
+        }
+    </script>
+</body>
+</html>

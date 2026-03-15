@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>b4</title>
+    <style>
+        #result {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="emailInput" placeholder="Nhập email">
+    <p id="result"></p>
+    <button onclick="checkEmail()">Check</button>
+    <script>
+        function checkEmail() {
+            let email = document.getElementById("emailInput").value;
+            let result = document.getElementById("result");
+            if (email.includes("@") && (email.endsWith(".com") || email.endsWith(".vn"))) {
+                result.innerText = "Email hợp lệ!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Email không hợp lệ!";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

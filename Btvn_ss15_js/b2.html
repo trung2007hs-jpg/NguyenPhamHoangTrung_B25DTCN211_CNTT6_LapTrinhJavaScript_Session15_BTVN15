@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>b2</title>
+</head>
+<body>
+    <button onclick="countClick()">Bấm vào tôi</button>
+    <p>Số lần bấm: <span id="count">0</span></p>
+    <script>
+        let count = 0;
+        function countClick() {
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Họ và Tên</label>
+    <input type="text" id="fullNameInput" placeholder="Nhập Họ Và Tên...">
+    <br><br>
+    <label for="">Ngành</label>
+    <input type="text" id="subjectInput" placeholder="Nhập nghành...">
+    <br><br>
+    <button onclick="studentsInput()">Thêm sinh viên</button>
+    <ol id="studentsList"></ol>
+    <script>
+        let students = []
+        function studentsInput() {
+            let fullName = document.getElementById('fullNameInput').value;
+            let subject = document.getElementById('subjectInput').value;
+            if (fullName === "" || subject === "") {
+                alert("Vui lòng nhập đủ thông tin");
+                return;
+            }
+            let newStudent = {
+                fullName,
+                subject,
+            };
+            console.log(students);
+            students.push(newStudent);
+        }
+    </script>
+</body>
+</html>
